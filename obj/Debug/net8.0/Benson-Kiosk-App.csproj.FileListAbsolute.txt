@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.exe
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.deps.json
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.runtimeconfig.json
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.dll
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.pdb
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.AssemblyInfo.cs
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.dll
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\refint\Benson-Kiosk-App.dll
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.pdb
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.genruntimeconfig.cache
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\ref\Benson-Kiosk-App.dll
