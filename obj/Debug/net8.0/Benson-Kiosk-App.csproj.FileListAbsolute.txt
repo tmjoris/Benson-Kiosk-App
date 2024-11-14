@@ -12,3 +12,4 @@ C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\refi
 C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.pdb
 C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.genruntimeconfig.cache
 C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\ref\Benson-Kiosk-App.dll
+C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.sourcelink.json
