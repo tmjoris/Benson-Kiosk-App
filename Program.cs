@@ -82,7 +82,16 @@ class Program
 
     static void AddNewItem()
     {
-        // Implement item adding logic here
+        int itemId = kioskInventory[0][0];
+
+        kioskInventory.Add(List<object>{});
+
+
+        Console.Write("Enter name");
+        string name = Console.ReadLine();
+
+
+
     }
 
     static void ViewMonthlyReport()
