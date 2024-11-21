@@ -5,9 +5,9 @@ class Program
 {
     static List<List<object>> kioskInventory = new List<List<object>>
     {
-        new List<object> { 1, "Bread", 50, 1.20 },
-        new List<object> { 2, "Milk", 100, 0.80 },
-        new List<object> { 3, "Yogurt", 75, 1.50 },
+        new List<object> { 1, "Bread", , 50, 80 },
+        new List<object> { 2, "Milk", 100, 60 },
+        new List<object> { 3, "Yogurt", 75, 150 },
         new List<object> { 4, "Soap", 20, 0.50 },
         new List<object> { 5, "Washing Powder", 30, 2.00 }
     };
@@ -82,19 +82,48 @@ class Program
 
     static void AddNewItem()
     {
-        int itemId = kioskInventory[0][0];
+        List<object> newItem = new List<object>();
 
-        kioskInventory.Add(List<object>{});
+        // Get the next item ID
+        int nextItemId = kioskInventory.Count + 1;
 
+        Console.WriteLine("Adding new item to the inventory...");
 
-        Console.Write("Enter name");
-        string name = Console.ReadLine();
+        // Add Item ID
+        newItem.Add(nextItemId);
 
+        // Get Item Name
+        Console.Write("Enter the name of the item: ");
+        string itemName = Console.ReadLine();
+        newItem.Add(itemName);
 
+        Console.Write("Enter the size/mass of the item");
+        int itemSize = int.Parse(Console.ReadLine());
+        newItem.Add(itemSize);
 
+        // Get Item Quantity
+        Console.Write("Enter the stock of the item: ");
+        int itemQuantity;
+        while (!int.TryParse(Console.ReadLine(), out itemQuantity))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number for the quantity: ");
+            }
+        newItem.Add(itemQuantity);
+
+            // Get Item Price
+            Console.Write("Enter the price of the item: ");
+            double itemPrice;
+            while (!double.TryParse(Console.ReadLine(), out itemPrice))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number for the price: ");
+            }
+            newItem.Add(itemPrice);
+
+            // Add the new item to the inventory
+            kioskInventory.Add(newItem);
     }
 
-    static void ViewMonthlyReport()
+static void ViewMonthlyReport()
     {
         // Implement monthly report viewing logic here
     }
