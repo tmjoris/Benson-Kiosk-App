@@ -1,37 +1,108 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, Mr.Benson!");
+﻿using System;
+using System.Collections.Generic;
 
-Console.WriteLine("What operation are you performing?\n" +
-    "1. Record a New Sale\n" +
-    "2. View Monthly Report\n" +
-    "3. Exit");
-
-Console.Write("->");
-int choice = int.Parse(Console.ReadLine());
-
-if (choice == 1)
+class Program
 {
-    Console.WriteLine("Which item(s) is being sold?\n" +
-        "1. Bread\n" +
-        "2. Milk\n" +
-        "3. Yorghurt\n" +
-        "4. Soap\n" +
-        "5. Washing Powder\n" +
-        "6. \n");
+    static List<List<object>> kioskInventory = new List<List<object>>
+    {
+        new List<object> { 1, "Bread", 50, 1.20 },
+        new List<object> { 2, "Milk", 100, 0.80 },
+        new List<object> { 3, "Yogurt", 75, 1.50 },
+        new List<object> { 4, "Soap", 20, 0.50 },
+        new List<object> { 5, "Washing Powder", 30, 2.00 }
+    };
 
-    string nameChoice = Console.ReadLine();
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, Mr.Benson!");
 
-}
-else if (choice == 2)
-{
+        while (true)
+        {
+            Console.WriteLine("What operation are you performing?\n" +
+                "1. Record a New Sale\n" +
+                "2. Add new item\n" +
+                "3. View Monthly Report\n" +
+                "4. Search for an item\n" +
+                "5. Exit");
 
-}
-else if(choice == 3)
-{
-    Console.WriteLine("Goodbye, Mr.Benson!");
+            Console.Write("->");
+            int choice = int.Parse(Console.ReadLine());
 
-}
-else
-{
-    Console.WriteLine("Invalid Choice selected");
+            switch (choice)
+            {
+                case 1:
+                    RecordNewSale();
+                    break;
+                case 2:
+                    AddNewItem();
+                    break;
+                case 3:
+                    ViewMonthlyReport();
+                    break;
+                case 4:
+                    SearchForItem();
+                    break;
+                case 5:
+                    Console.WriteLine("Goodbye, Mr.Benson!");
+                    return;
+                default:
+                    Console.WriteLine("Invalid Choice selected");
+                    break;
+            }
+        }
+    }
+
+    static void RecordNewSale()
+    {
+        Console.Write("Enter the name of the item being sold: ");
+        string itemName = Console.ReadLine();
+
+        foreach (var item in kioskInventory)
+        {
+            if (item[1].ToString().ToLower() == itemName.ToLower())
+            {
+                Console.WriteLine($"Item found: {item[1]} (Quantity: {item[2]}, Price: ${item[3]:0.00})");
+                Console.Write("Enter quantity sold: ");
+                int quantitySold = int.Parse(Console.ReadLine());
+
+                if ((int)item[2] >= quantitySold)
+                {
+                    item[2] = (int)item[2] - quantitySold;
+                    Console.WriteLine("Sale recorded successfully!");
+                }
+                else
+                {
+                    Console.WriteLine("Insufficient stock to complete the sale.");
+                }
+                return;
+            }
+        }
+        Console.WriteLine("Item not found.");
+    }
+
+    static void AddNewItem()
+    {
+        // Implement item adding logic here
+    }
+
+    static void ViewMonthlyReport()
+    {
+        // Implement monthly report viewing logic here
+    }
+
+    static void SearchForItem()
+    {
+        Console.Write("Enter the name of the item to search: ");
+        string itemName = Console.ReadLine();
+
+        foreach (var item in kioskInventory)
+        {
+            if (item[1].ToString().ToLower() == itemName.ToLower())
+            {
+                Console.WriteLine($"Item ID: {item[0]}, Name: {item[1]}, Quantity: {item[2]}, Price: ${item[3]:0.00}");
+                return;
+            }
+        }
+        Console.WriteLine("Item not found");
+    }
 }

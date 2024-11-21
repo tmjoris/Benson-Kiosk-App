@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Benson-Kiosk-App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db09af4233491f958a1afc07202efb13902d4b89")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e0b8c16f6baefdfe22409e77245f1222c232004")]
 [assembly: System.Reflection.AssemblyProductAttribute("Benson-Kiosk-App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Benson-Kiosk-App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
