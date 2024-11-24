@@ -13,3 +13,18 @@ C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Bens
 C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.genruntimeconfig.cache
 C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\ref\Benson-Kiosk-App.dll
 C:\Users\HP\source\repos\Benson-Kiosk-App\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.sourcelink.json
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.exe
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.deps.json
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.runtimeconfig.json
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.dll
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\bin\Debug\net8.0\Benson-Kiosk-App.pdb
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.GeneratedMSBuildEditorConfig.editorconfig
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.AssemblyInfoInputs.cache
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.AssemblyInfo.cs
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.csproj.CoreCompileInputs.cache
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.sourcelink.json
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.dll
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\refint\Benson-Kiosk-App.dll
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.pdb
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\Benson-Kiosk-App.genruntimeconfig.cache
+C:\MY PROJECTS\CLASS PROJECT!\Benson-Kiosk-App\obj\Debug\net8.0\ref\Benson-Kiosk-App.dll

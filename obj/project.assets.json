@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\Juliet M\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\source\\repos\\Benson-Kiosk-App\\Benson-Kiosk-App\\Benson-Kiosk-App.csproj",
+      "projectUniqueName": "C:\\MY PROJECTS\\CLASS PROJECT!\\Benson-Kiosk-App\\Benson-Kiosk-App.csproj",
       "projectName": "Benson-Kiosk-App",
-      "projectPath": "C:\\Users\\HP\\source\\repos\\Benson-Kiosk-App\\Benson-Kiosk-App\\Benson-Kiosk-App.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\source\\repos\\Benson-Kiosk-App\\Benson-Kiosk-App\\obj\\",
+      "projectPath": "C:\\MY PROJECTS\\CLASS PROJECT!\\Benson-Kiosk-App\\Benson-Kiosk-App.csproj",
+      "packagesPath": "C:\\Users\\Juliet M\\.nuget\\packages\\",
+      "outputPath": "C:\\MY PROJECTS\\CLASS PROJECT!\\Benson-Kiosk-App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Juliet M\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -44,8 +42,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -66,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
