@@ -264,27 +264,7 @@ static void ViewMonthlyReport()
         WaitForInput();
     }
 
-    static void ResetData()
-    {
-        Console.Clear();
-        Console.Write("Are you sure you want to reset all data? This cannot be undone. (yes/no): ");
-        if (Console.ReadLine()?.ToLower() == "yes")
-        {
-            kioskInventory.Clear();
-            totalRevenue = 0;
-            totalCOGS = 0;
 
-            if (File.Exists(inventoryFilePath)) File.Delete(inventoryFilePath);
-            if (File.Exists(salesReportFilePath)) File.Delete(salesReportFilePath);
-
-            Console.WriteLine("All data has been reset.");
-        }
-        else
-        {
-            Console.WriteLine("Reset cancelled.");
-        }
-        WaitForInput();
-    }
 
     static void LoadInventory()
     {
