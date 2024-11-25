@@ -24,7 +24,7 @@ class Program
             Console.WriteLine("2. Add or Update Inventory");
             Console.WriteLine("3. View Inventory");
             Console.WriteLine("4. View Monthly Report (Profit/Loss)");
-            Console.WriteLine("5. Reset Sales and Inventory Data");
+            Console.WriteLine("5. Restock Item");
             Console.WriteLine("6. Exit");
 
             Console.Write("-> ");
@@ -45,7 +45,7 @@ class Program
                     ViewMonthlyReport();
                     break;
                 case "5":
-                    ResetData();
+                    RestockItem();
                     break;
                 case "6":
                     Console.WriteLine("Goodbye!");
@@ -63,21 +63,20 @@ class Program
     static void RecordNewSales()
     {
         Console.Clear();
-        Console.WriteLine("Enter sales for multiple items. Type 'done' when finished.\n");
 
         while (true)
         {
-            Console.Write("Enter the name of the item sold (or 'done' to finish): ");
+            Console.Write("Enter the name of the item sold or (type 'done' to finish): ");
             string itemName = Console.ReadLine() ?? "";
 
             if (itemName.ToLower() == "done")
             {
-                Console.WriteLine("Sales recorded successfully.");
+                Console.WriteLine("Exiting......");
                 WaitForInput();
                 return;
             }
 
-            var item = kioskInventory.Find(i => i[1].ToString().ToLower() == itemName.ToLower());
+            var item = kioskInventory.Find(i => i[1].ToString().Contains(itemName, StringComparison.OrdinalIgnoreCase));
             if (item != null)
             {
                 Console.WriteLine($"Item found: {item[1]} (Quantity: {item[2]}, Price: Ksh {item[3]:0.00})");
@@ -95,14 +94,14 @@ class Program
                         LogSale(itemName, quantitySold, saleAmount, cost);
                         Console.WriteLine($"Sale recorded: Ksh {saleAmount:0.00} earned.");
 
-                        if ((int)item[2] == 0)
+                        if ((int)item[2] <= 5 && (int)item[2] > 0)
                         {
-                            Console.WriteLine($"Warning: {item[1]} is now out of stock!");
-                            Console.Write("Would you like to restock this item immediately? (yes/no): ");
-                            if (Console.ReadLine()?.ToLower() == "yes")
-                            {
-                                RestockItem(item);
-                            }
+                            Console.WriteLine($"Warning: {item[1]} is almost out of stock!");
+                        }
+                        else if ((int)item[2] == 0)
+                        {
+                            Console.WriteLine($"Warning: {item[1]} is now out of stock!\nPlease restock it!!!");
+                            
                         }
                     }
                     else
@@ -163,24 +162,66 @@ class Program
         else
         {
             kioskInventory.Add(new List<object> { kioskInventory.Count + 1, name, quantity, price, costPrice });
+            using (StreamWriter sw = File.AppendText("inventory.txt"))
+            {
+                sw.WriteLine($"{kioskInventory.Count + 1},{name},{quantity},{price},{costPrice}");
+            }
             Console.WriteLine($"Item '{name}' added successfully.");
         }
         WaitForInput();
     }
 
-    static void RestockItem(List<object> item)
+
+
+    static void RestockItem()
     {
-        Console.Write($"Enter the quantity to restock for {item[1]}: ");
-        if (int.TryParse(Console.ReadLine(), out int restockQuantity) && restockQuantity > 0)
+        Console.Clear();
+
+        while (true)
         {
-            item[2] = (int)item[2] + restockQuantity;
-            Console.WriteLine($"{item[1]} restocked successfully.");
+            Console.Write("Enter the name of the item you want to restock or (type 'done' to finish): ");
+            string itemName = Console.ReadLine() ?? "";
+
+            if (itemName.ToLower() == "done")
+            {
+                Console.WriteLine("Exiting......");
+                WaitForInput();
+                return;
+            }
+
+            var item = kioskInventory.Find(i => i[1].ToString().Contains(itemName, StringComparison.OrdinalIgnoreCase));
+            if (item != null)
+            {
+                int restockQuantity; 
+                bool validQuantity = false;
+
+                do
+                {
+                   Console.Write($"Enter the quantity to restock for {item[1]}, Current quantity is {item[2]} : ");
+                   if (int.TryParse(Console.ReadLine(), out restockQuantity) && restockQuantity > 0)
+                   {
+                     item[2] = (int)item[2] + restockQuantity;
+                     Console.WriteLine($"{item[1]} restocked successfully. New Quantity is: {item[2]}");
+                     validQuantity = true;
+                   }
+                   else
+                   {
+                     Console.WriteLine("Invalid quantity. Please enter a valid number for the quantity:");
+                   }
+                } while (!validQuantity);
+            
+            }
+            else
+            {
+                Console.WriteLine("Item not found. Please try again.");
+            }
         }
-        else
-        {
-            Console.WriteLine("Invalid quantity. Restock cancelled.");
-        }
+          
+   
     }
+
+
+
 
     static void ViewInventory()
     {
